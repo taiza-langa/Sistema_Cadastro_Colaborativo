@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+  </head>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #cbb6f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+    .container {
+      display: flex;
+      background: white;
+      width: 1050px;
+      height: 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-section {
+      width: 50%;
+      background-color: #f8e4c9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-section img {
+      width: 80%;
+    }
+
+    .form-section {
+      width: 50%;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group input {
+      width: 47.5%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .gender-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .gender-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: #333;
+    }
+
+    button {
+      width: 100%;
+      background-color: #7d3cff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      letter-spacing: 0.1rem;
+    }
+
+    button:active {
+        letter-spacing: 0.1rem;
+      }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="image-section">
+        <img src="ilustracao2.png" alt="Ilustração" />
+      </div>
+      <div class="form-section">
+        <h2>Cadastre-se</h2>
+        <form th:action="@{/register}" method="post">
+          <div class="input-group">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Digite seu primeiro nome"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Digite seu sobrenome"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="(xx) xxxxx-xxxx"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+              required
+            />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Digite sua senha novamente"
+              required
+            />
+          </div>
+          <div class="gender-container">
+            <label class="gender-title">Gênero:</label>
+            <div class="gender-group">
+              <label
+                ><input type="radio" name="gender" value="Feminino" />
+                Feminino</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Masculino" />
+                Masculino</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Outros" />
+                Outros</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Prefiro não dizer" />
+                Prefiro não dizer</label
+              >
+            </div>
+          </div>
+          <button type="submit">Continuar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
