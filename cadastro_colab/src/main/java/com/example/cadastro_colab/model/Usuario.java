@@ -1,4 +1,4 @@
-package com.example.cadastro_colab.model;
+package com.example.cadastro_colab.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,12 +13,12 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
 
-    private String nome;
-    private String sobrenome;
+    private String firstName;
+    private String lastName;
     private String email;
-    private String telefone;
-    private String senha;
-    private String sexo;
+    private String phone;
+    private String password;
+    private String gender;
 
     public Long getId_usuario() {
         return id_usuario;
@@ -28,20 +28,20 @@ public class Usuario {
         this.id_usuario = id_usuario;
     }
 
-    public String getNome() {
-        return nome;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -52,28 +52,28 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getSexo() {
-        return sexo;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
 }
