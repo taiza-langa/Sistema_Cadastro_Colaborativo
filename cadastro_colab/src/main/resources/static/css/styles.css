@@ -61,6 +61,11 @@ h2 {
   border-radius: 5px;
 }
 
+.input-group input:focus {
+  outline: none;
+  border: 1px solid #7d3cff;
+}
+
 .gender-container {
   display: flex;
   flex-direction: column;

@@ -9,15 +9,15 @@
     <script>
       function applyPhoneMask(event) {
         let input = event.target;
-        let value = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+        let value = input.value.replace(/\D/g, ""); 
         
         if (value.length <= 10) {
-          value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Máscara (XX) XXXXX-XXXX
+          value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); 
         } else {
-          value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Exemplo (XX) XXXXX-XXXX
+          value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); 
         }
 
-        input.value = value; // Atualiza o valor do campo
+        input.value = value; 
       }
     </script>
 
@@ -92,14 +92,18 @@
     </div>
 
     <script>
+      document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+      });
+  
       function verificarSenha() {
         let password = document.getElementById("password").value;
         let confirmPassword = document.getElementById("confirmPassword").value;
-    
+  
         if (password !== confirmPassword) {
           alert("As senhas devem ser iguais");
-          return false; 
+          return false;
         }
+        alert("Cadastro Realizado com Sucesso!")
         return true;
       }
     </script>
