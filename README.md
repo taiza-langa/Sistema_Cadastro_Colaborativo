@@ -5,8 +5,8 @@ Sistema de teste e apromoramento de habilidades git e github com colegas da facu
 ### Tecnologias utilizadas:
 * Spring Boot
 * Java
-* Html
-* Css
+* HTML
+* CSS
 * JavasCript
 * Thymeleaf
 * Jpa
